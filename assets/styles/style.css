@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background: #FEFEFF;
+}
+
+header, main {
+    padding: 10px;
+}
+
+/*navigasi*/
+nav img {
+    width: 50%;
+}
+
+nav ul {
+    display: none;
+}
+
+nav ul li {
+    background: #0255A5;
+    text-align: center;
+    transition: .5s;
+    display: grid;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background: #0167B3;
+}
+/*akhir navigasi*/
+
+.banner {
+    display: grid;
+    grid-template-areas: 
+    'hero'
+    'feature-1'
+    'feature-2';
+    color: #fff;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+/*hero*/
+.hero {
+    grid-area: hero;
+    background: url(../images/banner.jpg) center;
+    background-size: cover;
+    min-height: 450px;
+    padding: 20px;
+    display: grid;
+    align-content: center;
+}
+
+.hero h1 {
+    font-weight: 800;
+    font-style: italic;
+}
+/*akhir hero*/
+
+/*features*/
+.features {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 450px;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background: url(../images/banner.webp) center;
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background: url(../images/banner2.webp) top;
+    background-size: cover;
+}
+/*akhir feature*/
+
+/*article kit*/
+#content > article {
+    margin-top: 50px;
+}
+
+.heading{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.kits, .training, .accessories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.layer {
+    border: 1.5px solid #FEFEFF;
+    padding: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.layer img {
+    width: 100%;
+    margin-bottom: 50px;
+    transition: .5s;
+}
+
+.layer h1 {
+    color: #0166B2;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.layer h2 {
+    text-transform: capitalize;
+    color: #303131;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.layer h4 {
+    margin-top: 30px;
+    color: #101010;
+    font-size: 18px;
+}
+
+.layer p {
+    color: #303131;
+    margin-top: 10px;
+}
+
+.layer:hover{
+    border: 1.5px solid #C6C7C7;
+}
+
+.layer:hover img{
+    transform: scale(1.07);
+}
+/*akhir article kits*/
+
+/*shopping*/
+.shopping{
+    display: grid;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.shopping h4{
+    font-weight: bold;
+}
+
+form{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20.5fr 5fr;
+}
+
+.shopping input[type=email]{
+    padding: 10px;
+    border-radius: 0;
+    border: 1px solid #919091;
+}
+
+.shopping input[type=submit]{
+    background: #0067b2;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .2s ease-in;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.shopping input[type=submit]:hover{
+    background: #3384C0;
+}
+
+.agreement{
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+}
+
+.agreement span {
+    color: #0255A5;
+    text-decoration: underline;
+}
+
+/*cta*/
+.cta{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-items: center;
+    border-top: 1px solid #DDDCDC;
+    padding-top: 50px;
+}
+
+.info{
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+}
+
+.info i{
+    font-size: 70px;
+    color: #A3A3A3;
+}
+
+.info p{
+    font-size: 1rem;   
+}
+
+.info .description{
+    display: grid;
+    text-align: center;
+    gap: 2px;
+}
+
+.info .description h4{
+    color: #0166B2;
+    font-size: 1rem;
+}
+/*akhir cta*/
+
+/* aside */
+.profile {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: -250px;
+    background: #E5C375;
+    color: #fff;
+    border-radius: 5px 0 0 0;
+    padding: 20px;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile img {
+    width: 100px;
+}
+
+.profile button {
+    position: absolute;
+    left: -40px;
+    padding: 10px;
+    background: #20201E;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+.profile table {
+    color: #1D1D1B;
+}
+
+.profile table th {
+    text-align: left;
+}
+
+.profile table td {
+    text-align: right;
+}
+/* akhir aside */
+
+/*footer*/
+footer{
+    margin-top: 50px;
+    background: #112340;
+    display: grid;
+    padding: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    place-content: center;
+}
+
+.menu h2{
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.menu ul{
+    list-style: none;
+    line-height: 2rem;
+}
+
+.menu ul li{
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu img{
+    width: 100%;
+}
+/*akhir footer*/
+
+@media screen and (min-width: 768px) {
+    header, main{
+        margin: 30px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        list-style: none;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px;
+    }
+
+    .banner {
+        grid-template-areas: 
+        'hero hero feature-1'
+        'hero hero feature-2';
+    }
+
+    .hero > *{
+        opacity: 0;
+    }
+
+    .features {
+        min-height: 0;
+    }
+
+    .cta{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    footer {
+        grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav ul li a {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 100px;
+    }
+}
